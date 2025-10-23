@@ -69,6 +69,23 @@ Sadece config dosyanıza ekleyin:
 **Gereksinimler:**
 - Python 3.8+ ([İndir](https://python.org/downloads/))
 - `uvx` paket yöneticisi: `pip install uv`
+- SSH araçlarından biri: `sshpass`, `expect`, veya `plink` (Windows için PuTTY)
+
+### SSH Araçları Kurulumu
+
+**Windows için:**
+1. **PuTTY (plink)** - [İndir](https://putty.org/) ve PATH'e ekleyin
+2. **Git Bash** - [İndir](https://git-scm.com/) (sshpass dahil)
+3. **WSL** - Windows Subsystem for Linux
+
+**Linux/macOS için:**
+```bash
+# Ubuntu/Debian
+sudo apt-get install sshpass expect
+
+# macOS
+brew install sshpass expect
+```
 
 ### Yöntem 2: Manuel Kurulum
 

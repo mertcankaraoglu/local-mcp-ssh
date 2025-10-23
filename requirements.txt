@@ -1,2 +1,0 @@
-# MCP SSH Server Requirements
-# No external dependencies required - uses system ssh and sshpass

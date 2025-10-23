@@ -2,6 +2,9 @@
   "name": "mcp-ssh-server",
   "version": "1.0.0",
   "type": "module",
+  "bin": {
+    "mcp-ssh-server": "./index.js"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
     "ssh2": "^1.16.0"
