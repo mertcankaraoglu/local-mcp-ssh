@@ -6,11 +6,10 @@ import json
 import sys
 import subprocess
 import os
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 
 class MCPSSHServer:
     def __init__(self):
-        self.ssh_client = None
         self.ssh_config = None
     
     def handle_list_tools(self) -> Dict[str, Any]:
@@ -183,19 +182,8 @@ expect eof
                     timeout=30
                 )
             except FileNotFoundError:
-                # Method 3: Use plink (PuTTY) if available on Windows
-                plink_cmd = [
-                    "plink", "-ssh", "-P", str(self.ssh_config["port"]),
-                    f"{self.ssh_config['username']}@{self.ssh_config['host']}",
-                    "-pw", self.ssh_config["password"],
-                    args["command"]
-                ]
-                result = subprocess.run(
-                    plink_cmd,
-                    capture_output=True,
-                    text=True,
-                    timeout=30
-                )
+                # No SSH tools available
+                result = None
             
             if result:
                 output = result.stdout
