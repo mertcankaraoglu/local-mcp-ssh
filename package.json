@@ -1,0 +1,9 @@
+{
+  "name": "mcp-ssh-server",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "ssh2": "^1.16.0"
+  }
+}
