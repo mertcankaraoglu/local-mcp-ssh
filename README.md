@@ -47,7 +47,7 @@ sudo apt-get install -y nodejs
 
 ## 🚀 Kurulum
 
-### Yöntem 1: Otomatik Kurulum (Önerilen) ⭐
+### Otomatik Kurulum (Önerilen) ⭐
 
 Sadece config dosyanıza ekleyin:
 
@@ -55,11 +55,10 @@ Sadece config dosyanıza ekleyin:
 {
   "mcpServers": {
     "ssh": {
-      "command": "uvx",
+      "command": "npx",
       "args": [
-        "--from",
-        "git+https://github.com/mertcankaraoglu/local-mcp-ssh",
-        "mcp-ssh-server"
+        "-y",
+        "git+https://github.com/mertcankaraoglu/local-mcp-ssh.git#main"
       ]
     }
   }
@@ -67,27 +66,10 @@ Sadece config dosyanıza ekleyin:
 ```
 
 **Gereksinimler:**
-- Python 3.8+ ([İndir](https://python.org/downloads/))
-- `uvx` paket yöneticisi: `pip install uv`
-- SSH araçlarından biri: `sshpass`, `expect`, veya `plink` (Windows için PuTTY)
+- Node.js v18+ ([İndir](https://nodejs.org/))
+- Claude Desktop veya Cursor IDE
 
-### SSH Araçları Kurulumu
-
-**Windows için:**
-1. **PuTTY (plink)** - [İndir](https://putty.org/) ve PATH'e ekleyin
-2. **Git Bash** - [İndir](https://git-scm.com/) (sshpass dahil)
-3. **WSL** - Windows Subsystem for Linux
-
-**Linux/macOS için:**
-```bash
-# Ubuntu/Debian
-sudo apt-get install sshpass expect
-
-# macOS
-brew install sshpass expect
-```
-
-### Yöntem 2: Manuel Kurulum
+### Manuel Kurulum
 
 ### 1. Projeyi İndirin
 
