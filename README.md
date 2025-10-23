@@ -47,10 +47,35 @@ sudo apt-get install -y nodejs
 
 ## 🚀 Kurulum
 
+### Yöntem 1: Otomatik Kurulum (Önerilen) ⭐
+
+Sadece config dosyanıza ekleyin:
+
+```json
+{
+  "mcpServers": {
+    "ssh": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/mertcankaraoglu/local-mcp-ssh",
+        "mcp-ssh-server"
+      ]
+    }
+  }
+}
+```
+
+**Gereksinimler:**
+- Python 3.8+ ([İndir](https://python.org/downloads/))
+- `uvx` paket yöneticisi: `pip install uv`
+
+### Yöntem 2: Manuel Kurulum
+
 ### 1. Projeyi İndirin
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/local-mcp-ssh.git
+git clone https://github.com/mertcankaraoglu/local-mcp-ssh.git
 cd local-mcp-ssh
 ```
 
